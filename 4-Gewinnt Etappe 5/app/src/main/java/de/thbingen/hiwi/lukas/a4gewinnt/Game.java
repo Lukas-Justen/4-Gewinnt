@@ -4,17 +4,15 @@ package de.thbingen.hiwi.lukas.a4gewinnt;
  * Created by Martin on 06.03.2017.
  */
 
-public class Game {
-    enum Player {P1, P2}
-
-    ;
+class Game {
+    enum Player {P1, P2};
 
     private final int COLUMNS = 7;
     private final int ROWS = 6;
     private Player turn = Player.P1;
     private Player[][] positions = new Player[COLUMNS][ROWS];
 
-    public int insert(int column) {
+    int insert(int column) {
         int row = 0;
         while (row + 1 < ROWS && positions[column][row + 1] == null)
             row++;
@@ -27,7 +25,7 @@ public class Game {
         return -1;
     }
 
-    public boolean checkWin() {
+    boolean checkWin() {
         // Horizontal
         for (int i = 0; i < positions[0].length; i++) {
             int c = 0;
@@ -92,11 +90,11 @@ public class Game {
         return false;
     }
 
-    public void nextPlayer() {
+    void nextPlayer() {
         turn = turn == Player.P1 ? Player.P2 : Player.P1;
     }
 
-    public Player getPlayerTurn() {
+    Player getPlayerTurn() {
         return turn;
     }
 

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 imageViews[j][i] = image;
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
                 linearLayouts[j].addView(image, params);
+                linearLayouts[j].setTag(j);
                 linearLayouts[j].setOnClickListener(this);
             }
         }
@@ -44,15 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View view) {
-        int column = -1;
         LinearLayout linearLayout = (LinearLayout) view;
 
-        for (int i = 0; i < 7; i++) {
-            if (linearLayout.getId() == linearLayouts[i].getId()) {
-                column = i;
-            }
-        }
-
+        int column = (Integer) linearLayout.getTag();
         int row = game.insert(column);
 
         if (row >= 0) {

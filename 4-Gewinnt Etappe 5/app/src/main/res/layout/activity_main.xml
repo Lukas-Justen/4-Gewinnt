@@ -25,7 +25,9 @@
         android:layout_weight="1"
         android:gravity="bottom"
         android:orientation="vertical"
-        android:weightSum="6" />
+        android:weightSum="6" >
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
