@@ -58,17 +58,10 @@ class Game {
             }
         }
         // Diagonal - top left to bottom right
-        // 0x2, 1x3, 2x4, 3x5
-        // 0x1, 1x2, 2x3, 3x4, 4x5
-        // 0x0, 1x1, 2x2, 3x3, 4x4, 5x5
-
-        // 1x0, 2x1, 3x2, 4x3, 5x4, 6x5
-        // 2x0, 3x1, 4x2, 5x3, 6x4
-        // 3x0, 4x1, 5x2, 6x3
         for(int i = 0; i < 3; i++)
         {
             int c = 0;
-            for(int x = 0; x <= 6-i; x++)
+            for(int x = 0; x <= 5-i; x++)
             {
                 int y = i+x;
                 if( positions[x][y] == turn )
@@ -83,7 +76,7 @@ class Game {
         for(int i = 1; i <= 3; i++)
         {
             int c = 0;
-            for(int y = 0; y <= 7-i; y++)
+            for(int y = 0; y <= 6-i; y++)
             {
                 int x = i+y;
                 if( positions[x][y] == turn )
@@ -96,17 +89,10 @@ class Game {
             }
         }
         // Diagonal - bottom left to top right
-        // 0x2, 1x3, 2x4, 3x5
-        // 0x1, 1x2, 2x3, 3x4, 4x5
-        // 0x0, 1x1, 2x2, 3x3, 4x4, 5x5
-
-        // 1x0, 2x1, 3x2, 4x3, 5x4, 6x5
-        // 2x0, 3x1, 4x2, 5x3, 6x4
-        // 3x0, 4x1, 5x2, 6x3
         for(int i = 0; i < 3; i++)
         {
             int c = 0;
-            for(int x = 0; x <= 6-i; x++)
+            for(int x = 0; x <= 5-i; x++)
             {
                 int y = i+x;
                 if( positions[x][5-y] == turn )
@@ -121,7 +107,7 @@ class Game {
         for(int i = 1; i <= 3; i++)
         {
             int c = 0;
-            for(int y = 0; y <= 7-i; y++)
+            for(int y = 0; y <= 6-i; y++)
             {
                 int x = i+y;
                 if( positions[x][5-y] == turn )
