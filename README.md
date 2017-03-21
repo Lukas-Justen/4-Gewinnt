@@ -9,5 +9,5 @@ Eine bunte Version des klassischen Spiels 4 Gewinnt als Android App. Nachdem man
 Der Startbildschirm zeigt den Button zum Start des Spiels
 
 ## Spieldfeld
-![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/blob/master/Screenshots/Startbildschirm.png)
+![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/blob/master/Screenshots/Spielfeld.png)
 Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
