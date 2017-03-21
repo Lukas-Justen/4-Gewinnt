@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSizeButtonStart">40sp</dimen>
+    <dimen name="paddingButtonStart">10sp</dimen>
+</resources>
