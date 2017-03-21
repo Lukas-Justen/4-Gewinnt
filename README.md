@@ -5,9 +5,9 @@
 Eine bunte Version des klassischen Spiels 4 Gewinnt als Android App. Nachdem man den Button zum Starten des Spiels gedrückt hat, erscheint die standardmäßig blaue Oberfläche des 4 Gewinnt Spiels. Mit einfachen Clicks auf die jeweilige Spalte wirft man in diese einen Spielstein. Die Spieler spielen abwechselnd. Dabei kontrolliert die App jederzeit, ob ein Gewinner feststeht. Falls dies der Fall ist informiert sie die Spieler darüber und kehrt zum Startbildschirm zurück.
 
 ## Startbildschirm
-![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/Screenshots/Startbildschirm.png) 
+![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/blob/master/Screenshots/Startbildschirm.png) 
 Der Startbildschirm zeigt den Button zum Start des Spiels
 
 ##Spieldfeld
-![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/Screenshots/Spielfeld.png)
+![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/blob/master/Screenshots/Startbildschirm.png)
 Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
