@@ -49,14 +49,16 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
 #### Etappe 4
  - In der MainActivity Array vom Typ LinearLayout anlegen
  - In der onCreate() das Array mit den 7 vertikalen LinearLayouts befüllen
+ - Code in die onCreate() einfügen
 ```java
-for (int j = 0; j < 7; j++) {
-    for (int i = 0; i < 6; i++) {
-        ImageView image = new ImageView(this);
-        image.setImageDrawable(getResources().getDrawable(R.drawable.field));
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
-        linearLayouts[j].addView(image, params);
-    }
-}
+ for (int j = 0; j < 7; j++) {
+     for (int i = 0; i < 6; i++) {
+         ImageView image = new ImageView(this);
+         image.setImageDrawable(getResources().getDrawable(R.drawable.field));
+         LinearLayout.LayoutParams params = 
+             new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
+         linearLayouts[j].addView(image, params);
+     }
+ }
 ```
 #### Etappe 5
