@@ -14,6 +14,11 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
 
 ## Etappen
 #### Etappe 1
+ - Anlegen der StartActivity
+ - Anpassen der ScreenOrientation im Manifest auf landscape
+ - Styles.xml anpassen um ActionBar zu entfernen
+ - Colors.xml anpassen nach Wunsch
+ - Button in das Layout der StartActivity einfügen
 
 #### Etappe 2
 
