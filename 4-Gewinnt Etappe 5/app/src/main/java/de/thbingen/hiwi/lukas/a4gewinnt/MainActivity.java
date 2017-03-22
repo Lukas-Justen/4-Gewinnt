@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private LinearLayout[] linearLayouts = new LinearLayout[7];
     private ImageView[][] imageViews = new ImageView[7][6];
-    private Game game;
+    private Game game = new Game();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 imageViews[j][i] = image;
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
                 linearLayouts[j].addView(image, params);
-                linearLayouts[j].setTag(j);
-                linearLayouts[j].setOnClickListener(this);
             }
+            linearLayouts[j].setTag(j);
+            linearLayouts[j].setOnClickListener(this);
         }
-
-        game = new Game();
     }
 
     public void onClick(View view) {
