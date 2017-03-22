@@ -12,6 +12,9 @@ Der Startbildschirm zeigt den Button zum Start des Spiels
 ![alt logo](https://github.com/Lukas-Skywalker/4-Gewinnt/blob/master/Screenshots/Spielfeld.png)
 Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
 
+
+
+
 ## Etappen
 #### Etappe 1
  - Anlegen der StartActivity
@@ -21,6 +24,11 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
  - Button in das Layout der StartActivity einfügen
 
 #### Etappe 2
+ - Anlegen der MainActivity
+ - Button aus StartActivity über findViewById() holen und speichern
+ - Dem Button einen OnClickListener verpassen
+ - In der Methode onClick() einen Intent zum Start der MainActivity.class generieren
+ - In der Methode onClick() die Activity Starten
 
 #### Etappe 3
 
