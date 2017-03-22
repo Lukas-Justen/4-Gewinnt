@@ -34,7 +34,17 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
  - Anpassen der ScreenOrientation im Manifest auf landscape für MainActivity
  - Als Wurzellayout ein horizontales LinearLayout einfügen mit Eigenschaften:
    * weightSum = 7
+   * layout_width = match_parent
+   * layout_height = match_parent
+   * background= @color/colorPrimary
  - In das Wurzellayout 7 vertikale LinearLayouts einfügen mit Eigenschaften:
+   * weightSum = 6
+   * layout_width = match_parent
+   * layout_height = match_parent
+   * layout_weight = 1
+   * gravity = bottom
+   * background= @color/colorPrimary
+   + ids vergeben
 #### Etappe 4
 
 #### Etappe 5
