@@ -90,7 +90,8 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
      }
  
      if (game.checkWin()) {
-         Toast.makeText(this, "Spieler " + game.getPlayerTurn().name() + " hat gewonnen", Toast.LENGTH_LONG).show();
+         Toast.makeText(this, "Spieler " + game.getPlayerTurn().name() + " hat gewonnen", Toast.LENGTH_LONG).
+             show();
          finish();
      }
  
