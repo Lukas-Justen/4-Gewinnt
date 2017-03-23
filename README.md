@@ -77,23 +77,24 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
 ```
  - Code in onClick() einfügen
  ```java
-LinearLayout linearLayout = (LinearLayout) view;
-
-        int column = (Integer) linearLayout.getTag();
-        int row = game.insert(column);
-
-        if (row >= 0) {
-            if (game.getPlayerTurn() == Game.Player.P1) {
-                imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_red));
-            } else {
-                imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_yellow));
-            }
-
-            if (game.checkWin()) {
-                Toast.makeText(this, "Spieler " + game.getPlayerTurn().name() + " hat gewonnen", Toast.LENGTH_LONG).show();
-                finish();
-            }
-
-            game.nextPlayer();
-        }
+ LinearLayout linearLayout = (LinearLayout) view;
+ 
+ int column = (Integer) linearLayout.getTag();
+ int row = game.insert(column);
+ 
+ if (row >= 0) {
+     if (game.getPlayerTurn() == Game.Player.P1) {
+         imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_red));
+     } else {
+         imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_yellow));
+     }
+ 
+     if (game.checkWin()) {
+         Toast.makeText(this, "Spieler " + game.getPlayerTurn().name() + " hat gewonnen", Toast.LENGTH_LONG).show();
+         finish();
+     }
+ 
+     game.nextPlayer();
+ }
 ```
+ - Icon der App im Manifest ändern
