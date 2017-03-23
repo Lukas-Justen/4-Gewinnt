@@ -39,16 +39,16 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
    * background= @color/colorPrimary
  - In das Wurzellayout 7 vertikale LinearLayouts einfügen mit Eigenschaften:
    * weightSum = 6
-   * layout_width = match_parent
+   * layout_width = 0dp
    * layout_height = match_parent
    * layout_weight = 1
    * gravity = bottom
-   * background= @color/colorPrimary
    * ids vergeben
    
 #### Etappe 4
  - In der MainActivity Array vom Typ LinearLayout anlegen
  - In der onCreate() das Array mit den 7 vertikalen LinearLayouts befüllen
+ - Das Bild "field.png" aus diesem Repository in den drawable Ordner einfügen
  - Code in die onCreate() einfügen
 ```java
  for (int j = 0; j < 7; j++) {
@@ -62,3 +62,38 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
  }
 ```
 #### Etappe 5
+ - Die Klasse Game aus diesem Repository in das Projekt einfügen
+ - Das Bilder "logo.png", "stone_red.png" und "stone_yellow.png" aus diesem Repository in den drawable Ordner einfügen 
+ - In der MainActivity zweidimensionales Array vom Typ ImageView anlegen
+ - In der MainActivity Datenelement vom Typ Game deklarieren und initialisieren
+ - Code in innnerste Schleife aus Etappe 4 einfügen
+```java
+ imageViews[j][i] = image;
+```
+ - Code in äußere Schleife aus Etappe 4 einfügen und onClick() generieren
+```java
+ linearLayouts[j].setTag(j);
+ linearLayouts[j].setOnClickListener(this);
+```
+ - Code in onClick() einfügen
+ ```java
+LinearLayout linearLayout = (LinearLayout) view;
+
+        int column = (Integer) linearLayout.getTag();
+        int row = game.insert(column);
+
+        if (row >= 0) {
+            if (game.getPlayerTurn() == Game.Player.P1) {
+                imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_red));
+            } else {
+                imageViews[column][row].setImageDrawable(getResources().getDrawable(R.drawable.stone_yellow));
+            }
+
+            if (game.checkWin()) {
+                Toast.makeText(this, "Spieler " + game.getPlayerTurn().name() + " hat gewonnen", Toast.LENGTH_LONG).show();
+                finish();
+            }
+
+            game.nextPlayer();
+        }
+```
