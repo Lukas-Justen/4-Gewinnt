@@ -115,7 +115,7 @@ class Game {
                 int y = i+x;
                 if( positions[x][5-y] == turn )
                 {
-                    winPositions[c] = new Point(x, y);
+                    winPositions[c] = new Point(x, 5-y);
                     c++;
                 }
                 else
@@ -133,7 +133,7 @@ class Game {
                 int x = i+y;
                 if( positions[x][5-y] == turn )
                 {
-                    winPositions[c] = new Point(x, y);
+                    winPositions[c] = new Point(x, 5-y);
                     c++;
                 }
                 else
