@@ -99,3 +99,6 @@ Die standardmäßig blaue Spielfläche mit Androiden als Spielsteine
  }
 ```
  - Icon der App im Manifest ändern
+ 
+ 
+ Viel Spaß beim Ausprobieren :)
